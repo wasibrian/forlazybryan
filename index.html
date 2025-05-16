@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>動態字型預覽切換</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      line-height: 1.8;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    #controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 16px;
+      margin: 0 8px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+      background: white;
+    }
+    #preview {
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>動態字型預覽切換</h1>
+  <div id="controls">
+    <button onclick="setFont('標楷體')">標楷體</button>
+    <button onclick="setFont('宋體')">宋體</button>
+    <button onclick="setFont('Noto Sans TC')">Noto Sans TC</button>
+    <button onclick="setFont('serif')">系統預設字型</button>
+  </div>
+
+  <div id="preview">
+    這是一份用來照護家屬的病程摘要說明文件，目的是協助家人了解病情變化與治療決策。建議採取高熱量、高蛋白的飲食方式，適當補充體力，並避免感染風險。若有咳嗽、呼吸困難或疲倦加劇，應立即回診評估。
+  </div>
+
+  <script>
+    function setFont(font) {
+      document.getElementById("preview").style.fontFamily = font;
+    }
+  </script>
+</body>
+</html>
